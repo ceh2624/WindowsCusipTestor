@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,19 +49,15 @@ namespace WindowsCusipTestor
             /********************/
         }
     
-
         public static int doPos(string cuChars)
         {
             int strPos = -1;
-
             do
             {
                 strPos++;
             } while (cuChars != validChars.Substring(strPos, 1) && (strPos < validChars.Length -1));
-
             return strPos;
         }
-
     }
 
     public static class validate
@@ -81,8 +77,6 @@ namespace WindowsCusipTestor
             multiplier[7] = 2;
             
             int checkSum = 0;
-            //int quo, rem;
-
             if (cusipNum == "36200*AA0" || cusipNum == "31340*AA2" || cusipNum == "31358*AA1")
                 return false; //specific invalid cusips
             else
@@ -118,19 +112,15 @@ namespace WindowsCusipTestor
                     return false;
             }
         }
-
     }
-
 
     public class Divc  // My C# replacement for the C struct div_t in <stdlib.h>
     {
         public int quot, rem;
-
         public void myDiv(int num, int divisor)
         {
             quot = num / divisor;
             rem = num % divisor;
         }
     }
-
 }
